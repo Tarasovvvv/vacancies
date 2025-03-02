@@ -1,11 +1,11 @@
-import "./Vacancy.module.scss";
+import "./VacancyPreview.module.scss";
 
 interface IProps {
   vsc: string;
 }
 
-function Vacancy() {
+function VacancyPreview() {
   return <></>;
 }
 
-export default Vacancy;
+export default VacancyPreview;
