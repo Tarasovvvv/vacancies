@@ -1,3 +1,3 @@
-export { default as Vacancy } from "./vacancy/ui/Vacancy";
-export { default as AddRepo } from "./add-repo/ui/AddRepo";
-export { default as Overview } from "./overview/ui/Overview";
+export { default as VacancyPage } from "./vacancy/ui/VacancyPage";
+export { default as AddRepoPage } from "./add-repo/ui/AddRepoPage";
+export { default as OverviewPage } from "./overview/ui/OverviewPage";
