@@ -28,6 +28,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
+    "react-head": "^3.4.2",
     "sass-embedded": "^1.85.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",

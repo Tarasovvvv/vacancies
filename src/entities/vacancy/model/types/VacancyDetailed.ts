@@ -1,8 +1,9 @@
-export interface IVacancy {
+export interface IVacancyDetailed {
   id: number;
   jobTitle: string;
   experience: number;
-  salary: number;
+  salary: string;
+  location: string;
   requirements: string[];
   workConditions: string[];
 }

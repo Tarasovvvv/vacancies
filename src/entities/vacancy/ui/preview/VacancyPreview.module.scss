@@ -1,0 +1,56 @@
+.vacancyPreview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 300px;
+  padding: 30px;
+  border-radius: 30px;
+
+  background-color: white;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-family: Lato, system-ui, sans-serif;
+  line-height: 1;
+
+  & * {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.primaryText {
+  padding: 18px 7px;
+
+  color: black;
+}
+
+.secondaryText {
+  width: fit-content;
+
+  color: #7d7d7d;
+}
+
+.detailsLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 197px;
+  padding: 13px 20px;
+  border-radius: 40px;
+
+  font-size: 20px;
+  line-height: 26px;
+
+  color: white;
+  background-color: #3b46e0;
+
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+}

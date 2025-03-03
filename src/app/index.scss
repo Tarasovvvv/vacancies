@@ -5,6 +5,60 @@
   border: none;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  height: inherit;
+  width: inherit;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+
+  background-color: #eaeff4;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/lato-400.woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/lato-500.woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat-500.woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat-600.woff2");
+  font-weight: 600;
+  font-display: swap;
 }
