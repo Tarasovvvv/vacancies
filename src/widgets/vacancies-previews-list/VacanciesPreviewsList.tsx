@@ -1,8 +1,8 @@
-import { IVacancyPreview, VacancyPreview } from "entities/vacancy";
-import styles from "./VacanciesPreviewsList.module.scss";
 import { SerializedError } from "@reduxjs/toolkit";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { ErrorerProvider, LoaderProvider } from "shared/ui";
+import { IVacancyPreview, VacancyPreview } from "entities/vacancy";
+import styles from "./VacanciesPreviewsList.module.scss";
 
 interface IProps {
   vacancies: IVacancyPreview[];

@@ -1,14 +1,9 @@
 import { IVacancyPreview } from "entities/vacancy";
-import styles from "./VacancyPreview.module.scss";
 import { Link } from "react-router-dom";
+import { formatSalary } from "entities/vacancy";
+import styles from "./VacancyPreview.module.scss";
 
 function VacancyPreview({ id, location, jobTitle, salary }: IVacancyPreview) {
-  const formatSalary = (salary: string) => {
-    const formattedSalary: number = parseInt(salary, 10);
-
-    return isNaN(formattedSalary) ? salary : formattedSalary.toLocaleString("ru-RU");
-  };
-
   return (
     <article className={styles.vacancyPreview}>
       <div className={styles.data}>

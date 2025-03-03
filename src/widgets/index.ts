@@ -1,1 +1,1 @@
-export { default as VacancyPreviewsList } from "./vacancies-previews-list/VacanciesPreviewsList";
+export { default as VacanciesPreviewsList } from "./vacancies-previews-list/VacanciesPreviewsList";

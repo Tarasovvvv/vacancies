@@ -1,7 +1,7 @@
 import styles from "./LoaderProvider.module.scss";
 
 interface IProps {
-  children: JSX.Element;
+  children: JSX.Element[] | JSX.Element;
   isLoading: boolean;
 }
 

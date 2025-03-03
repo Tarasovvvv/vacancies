@@ -1,2 +1,13 @@
 .backButton {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  gap: 11.11px;
+  border-radius: 155.56px;
+  padding: 11.11px;
+
+  color: white;
+  background-color: #3b46e0;
 }

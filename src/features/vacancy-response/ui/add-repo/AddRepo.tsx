@@ -1,4 +1,4 @@
-import "./AddRepoForm.module.scss";
+import "./AddRepo.module.scss";
 
 function AddRepoForm() {
   return <></>;

@@ -1,8 +1,9 @@
 import { useGetAllQuery } from "entities/vacancy";
 
-const useCountry = () => {
+const useVacancies = () => {
   const { data, isLoading, error } = useGetAllQuery();
 
   return { vacancies: data || [], isLoading, error };
 };
-export default useCountry;
+
+export default useVacancies;

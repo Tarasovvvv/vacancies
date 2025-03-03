@@ -14,7 +14,7 @@ const VacanciesApi = createApi({
         },
       }),
     }),
-    getVacancyById: build.query<IVacancyDetailed, { vacancyId: number }>({
+    getVacancyById: build.query<IVacancyDetailed[], { vacancyId: number | string }>({
       query: ({ vacancyId }) => ({
         url: "vacancies",
         params: {

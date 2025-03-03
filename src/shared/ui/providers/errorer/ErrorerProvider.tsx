@@ -1,9 +1,10 @@
 import { SerializedError } from "@reduxjs/toolkit";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import styles from "./ErrorerProvider.module.scss";
+import { Title } from "react-head";
 
 interface IProps {
-  children: JSX.Element;
+  children: JSX.Element[] | JSX.Element;
   error: FetchBaseQueryError | SerializedError | undefined;
 }
 
@@ -29,11 +30,14 @@ function ErrorerProvider({ children, error }: IProps) {
   }
 
   return error ? (
-    <p className={styles.errorMessage}>
-      {errorMessage as string}
-      <br />
-      🤔
-    </p>
+    <>
+      <Title>{errorMessage as string}</Title>
+      <p className={styles.errorMessage}>
+        {errorMessage as string}
+        <br />
+        🤔
+      </p>
+    </>
   ) : (
     children
   );

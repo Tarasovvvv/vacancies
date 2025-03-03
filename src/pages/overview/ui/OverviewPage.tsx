@@ -1,17 +1,16 @@
-import { HeadProvider } from "react-head";
+import { Title } from "react-head";
 import { useVacancies } from "entities/vacancy";
+import { VacanciesPreviewsList } from "widgets";
 import styles from "./OverviewPage.module.scss";
-import VacanciesPreviewsList from "widgets/vacancies-previews-list/VacanciesPreviewsList";
+import { resetState } from "features/vacancy-response";
 
 function OverviewPage() {
   const vacanciesData = useVacancies();
+  resetState();
 
   return (
     <>
-      <HeadProvider>
-        <title>Вакансии</title>
-      </HeadProvider>
-
+      <Title>Вакансии</Title>
       <div className={styles.overviewPage}>
         <h2 className={styles.pageTitle}>Наши вакансии</h2>
         <div className={styles.contentWrapper}>
