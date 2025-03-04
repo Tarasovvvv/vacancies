@@ -3,17 +3,22 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useVacancy, VacancyDetailed } from "entities/vacancy";
 import { LoaderProvider, ErrorerProvider, BackButton } from "shared/ui";
-import { resetState, ResponseForm } from "features/vacancy-response";
+import { IFormState, resetState, ResponseForm, setFieldValue } from "features/vacancy-response";
 import { RootState } from "app/stores/VacanciesStore";
 import styles from "./VacancyPage.module.scss";
+import { useDispatch } from "react-redux";
 
 function VacancyPage() {
   const { vacancyId } = useParams();
+  const dispatch = useDispatch();
   const { id } = useSelector((state: RootState) => state.response);
   const { vacancy, isLoading, error } = useVacancy(vacancyId!);
   const jobTitle = vacancy.jobTitle;
 
-  if (id.toString() !== vacancyId) resetState();
+  if (id > -1 && id.toString() !== vacancyId) {
+    resetState();
+    dispatch(setFieldValue({ field: "id", value: vacancyId?.toString() as keyof IFormState }));
+  }
 
   return (
     <>
@@ -27,7 +32,7 @@ function VacancyPage() {
             </div>
             <div className={styles.contentWrapper}>
               <VacancyDetailed {...vacancy} />
-              <ResponseForm />
+              <ResponseForm {...vacancy} />
             </div>
           </div>
         </ErrorerProvider>

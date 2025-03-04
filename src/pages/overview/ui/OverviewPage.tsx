@@ -3,10 +3,12 @@ import { useVacancies } from "entities/vacancy";
 import { VacanciesPreviewsList } from "widgets";
 import styles from "./OverviewPage.module.scss";
 import { resetState } from "features/vacancy-response";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 function OverviewPage() {
   const vacanciesData = useVacancies();
-  resetState();
+  const dispatch = useDispatch();
 
   return (
     <>
