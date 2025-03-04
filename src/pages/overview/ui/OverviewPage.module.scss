@@ -1,0 +1,21 @@
+.overviewPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+  width: 1760px;
+}
+
+.pageTitle {
+  padding: 4px 0;
+
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 57.6px;
+
+  text-align: center;
+}
+
+.contentWrapper {
+  height: 630px;
+}

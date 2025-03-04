@@ -1,0 +1,32 @@
+.vacancyPage {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  place-content: center;
+  gap: 165px;
+
+  padding-left: 150px;
+  padding-right: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.pageTitleWrapper {
+  display: flex;
+  place-items: center;
+  gap: 40px;
+
+  padding-left: 81px;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+}

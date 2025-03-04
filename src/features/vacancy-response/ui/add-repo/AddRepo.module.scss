@@ -1,0 +1,147 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+
+  width: fit-content;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 872px;
+  font-size: 30px;
+}
+
+.input,
+.accordion {
+  justify-content: space-between;
+
+  border-radius: 20px;
+  font-size: 20px;
+
+  background-color: white;
+}
+
+.accordionInput {
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(246, 242, 255);
+  }
+}
+
+.accordion {
+  &.collapsed {
+    opacity: 0;
+  }
+}
+
+.input {
+  padding: 30px;
+  flex-grow: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  height: fit-content;
+  font-size: 24px;
+}
+
+.repoCountInput {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+
+  &:hover {
+    background-color: rgb(246, 242, 255);
+  }
+}
+
+.accordionButtonSvg {
+  height: 100%;
+  transition: 200ms;
+  transform: rotate(0);
+}
+
+.isClosed {
+  transform: rotate(-90deg);
+}
+
+.accordionButton {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  padding-right: 30px;
+  background-color: transparent;
+}
+
+.accordionItem {
+  padding: 30px;
+  transition: background-color 200ms;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(246, 242, 255);
+  }
+
+  &:first-child {
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &:last-child {
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.submitButton {
+  align-self: center;
+
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+
+  width: fit-content;
+  border-radius: 100px;
+  margin-top: 50px;
+  padding: 22px 30px;
+
+  cursor: pointer;
+  color: white;
+  background-color: #3b46e0;
+}
+
+.inactive {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+}
